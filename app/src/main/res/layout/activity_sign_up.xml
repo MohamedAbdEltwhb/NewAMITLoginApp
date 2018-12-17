@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SignUpActivity">
+
+    <include
+        android:id="@+id/register_toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_toolbar"
+        app:srcCompat="@drawable/n" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#922e2f3a"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="1.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.example.mm.newametapp.customfonts.TitleFont
+                        android:id="@+id/titleFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/txt_sign"
+                        android:textColor="@color/redColor"
+                        android:textSize="24sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.example.mm.newametapp.customfonts.TitleFont
+                        android:id="@+id/editTextTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/txt_up"
+                        android:textColor="@color/WhiteColor"
+                        android:textSize="24sp"
+                        app:layout_constraintStart_toEndOf="@+id/titleFont"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/f-name_id"
+                        style="@style/edetTextRegester"
+                        android:layout_marginTop="40dp"
+                        android:hint="@string/f_name_hint"
+                        android:inputType="textPersonName"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/editTextTitle" />
+
+                    <EditText
+                        android:id="@+id/l-name_id"
+                        style="@style/edetTextRegester"
+                        android:layout_marginTop="16dp"
+                        android:hint="@string/l_name_hint"
+                        android:inputType="textPersonName"
+                        app:layout_constraintEnd_toEndOf="@+id/f-name_id"
+                        app:layout_constraintStart_toStartOf="@+id/f-name_id"
+                        app:layout_constraintTop_toBottomOf="@+id/f-name_id" />
+
+                    <EditText
+                        android:id="@+id/passord_id"
+                        style="@style/edetTextRegester"
+                        android:layout_marginTop="16dp"
+                        android:drawableRight="@drawable/ic_vpn_key_black_24dp"
+                        android:drawableEnd="@drawable/ic_vpn_key_black_24dp"
+                        android:hint="@string/password_hint"
+                        android:inputType="textPassword"
+                        app:layout_constraintEnd_toEndOf="@+id/l-name_id"
+                        app:layout_constraintStart_toStartOf="@+id/l-name_id"
+                        app:layout_constraintTop_toBottomOf="@+id/l-name_id"
+                         />
+
+                    <EditText
+                        android:id="@+id/re-passord_id"
+                        style="@style/edetTextRegester"
+                        android:layout_marginTop="16dp"
+                        android:drawableRight="@drawable/ic_lock_black_24dp"
+                        android:drawableEnd="@drawable/ic_lock_black_24dp"
+                        android:hint="@string/re_password_hint"
+                        android:inputType="textPassword"
+                        app:layout_constraintEnd_toEndOf="@+id/passord_id"
+                        app:layout_constraintStart_toStartOf="@+id/passord_id"
+                        app:layout_constraintTop_toBottomOf="@+id/passord_id"
+                         />
+
+                    <EditText
+                        android:id="@+id/email_id"
+                        style="@style/edetTextRegester"
+                        android:layout_marginTop="16dp"
+                        android:drawableRight="@drawable/ic_email_black_24dp"
+                        android:hint="@string/email_hint"
+                        android:inputType="textEmailAddress"
+                        app:layout_constraintEnd_toEndOf="@+id/re-passord_id"
+                        app:layout_constraintStart_toStartOf="@+id/re-passord_id"
+                        app:layout_constraintTop_toBottomOf="@+id/re-passord_id"
+                        android:drawableEnd="@drawable/ic_email_black_24dp" />
+
+                    <EditText
+                        android:id="@+id/phone_id"
+                        style="@style/edetTextRegester"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:drawableRight="@drawable/ic_phone_black_24dp"
+                        android:hint="@string/phone_hint"
+                        android:inputType="phone"
+                        app:layout_constraintEnd_toEndOf="@+id/email_id"
+                        app:layout_constraintStart_toStartOf="@+id/email_id"
+                        app:layout_constraintTop_toBottomOf="@+id/email_id"
+                        android:drawableEnd="@drawable/ic_phone_black_24dp" />
+
+                    <Button
+                        android:id="@+id/sign_Un_button"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="32dp"
+                        android:layout_marginTop="32dp"
+                        android:background="@drawable/ic_btn_sign_up_activity"
+                        android:padding="5dp"
+                        android:text="@string/SignUp_ptn"
+                        android:textAllCaps="false"
+                        android:textColor="@color/WhiteColor"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/phone_id" />
+
+                    <com.example.mm.newametapp.customfonts.MyTextView
+                        android:id="@+id/signIn_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="32dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="@string/login_ptn"
+                        android:textColor="@color/redColor"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sign_Un_button" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </ScrollView>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

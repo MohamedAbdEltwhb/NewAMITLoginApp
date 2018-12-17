@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_packgrond">
+
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/m1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="2dp"
+                android:src="@drawable/m1"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/WhiteColor" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/f1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="2dp"
+                android:src="@drawable/f1"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/WhiteColor" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/m2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="2dp"
+                android:src="@drawable/m2"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/WhiteColor" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/f2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="2dp"
+                android:src="@drawable/f2"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/WhiteColor" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/m3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="2dp"
+                android:src="@drawable/m3"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/WhiteColor" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/f3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="2dp"
+                android:src="@drawable/f3"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/WhiteColor" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/m4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="2dp"
+                android:src="@drawable/m4"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/WhiteColor" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/f4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="2dp"
+                android:src="@drawable/f4"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/WhiteColor"
+        android:textSize="16sp"
+        android:background="@drawable/ic_btn_sign_up_activity"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+</android.support.constraint.ConstraintLayout>
