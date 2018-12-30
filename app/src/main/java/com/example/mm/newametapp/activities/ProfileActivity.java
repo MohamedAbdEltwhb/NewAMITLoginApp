@@ -1,5 +1,6 @@
 package com.example.mm.newametapp.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -60,6 +61,13 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this, UsersActivity.class);
+        startActivity(intent);
+    }
+
     private void getStorageData(){
         mProfileTextView.setText(SharedPreferencesStorage.getEmail(this));
 
@@ -69,28 +77,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         password.setText(SharedPreferencesStorage.getPassword(this));
         phone.setText(SharedPreferencesStorage.getPhone(this));
 
-//        String image = SharedPreferencesStorage.getImage(ProfileActivity.this);
-//        switch (image){
-//            case AVATAR_M_A:
-//                setImageResources(R.drawable.m1);
-//                break;
-//            case AVATAR_F_A:setImageResources(R.drawable.f1);
-//                break;
-//            case AVATAR_M_B:setImageResources(R.drawable.m2);
-//                break;
-//            case AVATAR_F_B:setImageResources(R.drawable.f2);
-//                break;
-//            case AVATAR_M_C:setImageResources(R.drawable.m3);
-//                break;
-//            case AVATAR_F_C:setImageResources(R.drawable.f3);
-//                break;
-//            case AVATAR_M_D:setImageResources(R.drawable.m4);
-//                break;
-//            case AVATAR_F_D:setImageResources(R.drawable.f4);
-//                break;
-//            default: Toast.makeText(this, "no",Toast.LENGTH_LONG).show();
-//                break;
-//        }
     }
 
     private void initViews() {
@@ -108,8 +94,5 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         mProfileCircleImageView.setOnClickListener(this);
     }
 
-//    private void setImageResources(int id){
-//        mProfileCircleImageView.setImageDrawable(getResources().getDrawable(id));
-//    }
 
 }

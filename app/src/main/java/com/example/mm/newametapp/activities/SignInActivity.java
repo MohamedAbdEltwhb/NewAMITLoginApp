@@ -59,7 +59,8 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onClick(View v) {
                 finish();
-                System.exit(0);
+                //System.exit(0);
+                moveTaskToBack(true);
             }
         });
     }
@@ -107,6 +108,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
                 Intent toMain = new Intent(this, UsersActivity.class);
                 toMain.putExtra(EXTRA_EMILE, textMail);
+
                 toMain.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 toMain.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
@@ -131,7 +133,6 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             mEditTextPassword.setInputType(129);
             mCheckBox.setText(getString(R.string.show_checkBox));
         }
-
     }
 
     private void initObjects(){
